@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إطار Zoho مع عيون أنميشن</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* العيون المتحركة */
+        .eye {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            animation: moveEyes 4s infinite alternate;
+        }
+
+        /* الأنميشن المتعلق بحركة العيون */
+        @keyframes moveEyes {
+            0% {
+                top: 20%;
+                left: 10%;
+            }
+            25% {
+                top: 30%;
+                left: 30%;
+            }
+            50% {
+                top: 50%;
+                left: 50%;
+            }
+            75% {
+                top: 70%;
+                left: 30%;
+            }
+            100% {
+                top: 80%;
+                left: 10%;
+            }
+        }
+
+        .eye:nth-child(2) {
+            animation-delay: 2s; /* تأخير الأنميشن للعين الثانية */
+        }
+    </style>
+</head>
+<body>
+    <!-- عيون الأنميشن -->
+    <div class="eye" style="left: 10%;"></div>
+    <div class="eye" style="left: 80%;"></div>
+
+    <!-- iframe -->
+    <iframe src="https://show.zoho.sa/show/publish/vt2akbf50c43878fb48a38c6a57921f678de8/params?toolbar=false&menu=false&loop=false&viewtype=1" 
+            width="960" 
+            height="569" 
+            style="border:1px solid #aabbcc; max-width: 100%;" 
+            allowfullscreen="true" 
+            mozallowfullscreen="true" 
+            webkitallowfullscreen="true">
+    </iframe>
+</body>
+</html>
